@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.practice.model.Coffee;
+import com.spring.practice.model.CoffeeLover;
 import com.spring.practice.service.CoffeeService;
 
 @RestController
@@ -30,6 +31,11 @@ public class CoffeeController {
 	@GetMapping("/jaffa")
 	public ResponseEntity<Void> jaffaCall() {
 		System.out.println("******** JAFFA *********");
+		CoffeeLover cLover = new CoffeeLover("Amzad", "Cappucino", true);
+		System.out.println(cLover.getName());
+		System.out.println(cLover.getCoffee());
+		System.out.println(cLover.isFavourite());
+		System.out.println(cLover.toString());
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	

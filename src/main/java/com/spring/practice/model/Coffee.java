@@ -26,4 +26,5 @@ public class Coffee {
 
 	@Column(name = "COFFEE_DESCRIPTION")
 	private String description;
+	
 }
