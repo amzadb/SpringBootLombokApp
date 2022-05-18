@@ -14,17 +14,20 @@ import lombok.Setter;
 @Setter
 @Data
 @Entity
-@Table(name = "COFFEE_BEVERAGES")
-public class Coffee {
+@Table(name = "TAB2")
+public class Tab2 {
 	@Id
 	@GeneratedValue
-	@Column(name = "ID")
-	private Integer id;
+	@Column(name = "PROP_ID")
+	private Integer propId;
+	
+	@Column(name = "APP_ID")
+	private Integer appId;
 
-	@Column(name = "COFFEE_NAME")
-	private String name;
+	@Column(name = "APP_NAME")
+	private String appName;
 
-	@Column(name = "COFFEE_DESCRIPTION")
-	private String description;
+	@Column(name = "PROP_VALUE")
+	private String propValue;
 	
 }
